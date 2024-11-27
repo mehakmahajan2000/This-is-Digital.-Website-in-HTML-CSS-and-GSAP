@@ -1,0 +1,1 @@
+"This-is-Digital" is a website project built using HTML, CSS, and GSAP (GreenSock Animation Platform) to create smooth and dynamic animations. The site showcases modern web design techniques with interactive elements, making use of GSAP’s powerful animation library for enhanced user experience.
