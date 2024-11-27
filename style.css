@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Custom font setup */
+@font-face {
+    font-family: "Cooper";
+    src: url("./path-to-your-font-file/CooperLtBT.ttf");
+}
+
+/* Global styles */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Main container */
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+/* Navbar */
+#nav {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+#nav > h2 {
+    font-size: 30px;
+    font-family: "Cooper", Arial, sans-serif;
+    font-weight: 400;
+    color: #333;
+}
+
+#part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#part2 a {
+    text-decoration: none;
+    color: #222;
+    margin: 0 15px;
+    font-size: 16px;
+    position: relative;
+}
+#part2 a:hover {
+    color: springgreen;
+    transform: scale(1.1);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+#part2 a:nth-last-child(1) {
+    position: relative;
+    padding: 7px 18px;
+    border-radius: 50px;
+    border: 1px solid black;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+#part2 a:nth-last-child(1) h5 {
+    font-weight: 100;
+    position: relative;
+    z-index: 99;
+}
+
+#part2 a:nth-last-child(1) #green {
+    width: 100%;
+    height: 100%;
+    background-color: springgreen;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: left 0.4s ease;
+}
+
+#part2 a:nth-last-child(1):hover #green {
+    left: 0;
+}
+
+/* Page 1 */
+#page1 {
+    min-height: 100vh;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+#page1 > h1 {
+    font-size: 4vw;
+    font-weight: 100;
+    text-transform: capitalize;
+    width: 40%;
+    z-index: 99;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#page1 h1::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 16px;
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    background-size: cover;
+    bottom: -5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#page1 img {
+    transition: transform 0.8s ease, opacity 0.5s ease;
+}
+
+#page1 img:hover {
+    transform: translateY(-50px);
+}
+
+/* Image positioning */
+#img1 {
+    height: 430px;
+    width: 300px;
+    position: absolute;
+    left: 6%;
+    top: 20%;
+}
+
+#img2 {
+    height: 220px;
+    width: 250px;
+    position: absolute;
+    right: 25%;
+    top: 18%;
+}
+
+#img3 {
+    height: 210px;
+    width: 200px;
+    position: absolute;
+    right: 7%;
+    top: 45%;
+}
+
+/* Page 2 */
+#page2 {
+    min-height: 70vh;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+#page2 h5{
+    font-size: 21px;
+    font-family: gilroy;
+    font-weight: 500;
+    margin: 26px 0;
+    position: relative;
+}
+#page2 h5::before{
+    content: "";
+    background-color: springgreen;
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    left: -5%;
+    top: 21%;
+    border-radius: 50%;
+}
+#page2 h1{
+    font-size: 44px;
+    width: 70%;
+    text-align: center;
+    font-family: cooper;
+    font-weight:lighter;   
+    position: relative;
+}
+#page2 h1::after{
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 240px;
+    background-image: url(https://thisisdigital.co.uk/dist/images/circle-green.svg);
+    bottom: -11px;
+    left: 35%;
+}
+#about-us{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+#about-us>h4{
+    font-size: 28px;
+    font-family: gilroy;
+    font-weight: 500;
+}
+#hara{
+    height: 40px;
+    width: 80px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    margin-left: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hara img{
+    height: 40px;
+}
+
+/* Page 3 Styles */
+#page3 {
+    overflow: visible;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+/* Left Side (Images) */
+#page3 #images {
+    width: 45%;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px;
+}
+#page3 #images #img4 {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;
+    top: 0;
+}
+#page3 #images #img5 {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    top: 0;
+    left: 40%;
+}
+
+
+/* Right Side (Text) */
+#page3 #text {
+    width: 50%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; 
+
+}
+
+#page3 #text h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: gilroy;
+    width: 55%;
+    position: relative;
+}
+
+#page3 #text h2::after{
+    content: '';
+    background-image: url(https://thisisdigital.co.uk/dist/images/underline-green.svg);
+    height: 10px;
+    width: 160px;
+    position: absolute;
+    left: 20%;
+}
+#page3 #text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 20px;
+    width: 90%;
+}
+#text #learn-about{
+    display: flex;
+    align-items: center;
+    margin-top: 30px; 
+}
+#learn-about>h4{
+    font-size: 28px;
+    font-family: gilroy;
+    font-weight: 500;
+}
+#our-services{
+    height: 40px;
+    width: 80px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    margin-left: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#our-services img{
+    height: 40px;
+}
+
+#hara, #our-services {
+    cursor: pointer;
+}
